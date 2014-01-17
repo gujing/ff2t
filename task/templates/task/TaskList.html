@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% if task_list %}
+    <ul>
+        {% for task in task_list %}
+            <li><a href="{% url 'tasks:detail' task.id %}">{{ task.desc }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks are available.</p>
+{% endif %}
+</body>
+</html>

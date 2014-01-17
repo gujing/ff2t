@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form action="{% url 'tasks:add' %}" method="post">
+    {% csrf_token %}
+    <select name="emp_id">
+        {% for user in user_list %}
+            <option value="{{ user.id }}">{{ user.nickname }}</option>
+        {% endfor %}
+    </select>
+    <input name="desc" type="text"/>
+    <button type="submit" name="OK">OK</button>
+</form>
+</body>
+</html>
