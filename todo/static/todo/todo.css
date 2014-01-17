@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'My Cute';
+    src: url("As Cute As....ttf");
+    font-weight: bold;
+}
+
+body{
+    font-family: 'My Cute', Courier, monospace;
+}

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/todo.css' %}">
+</head>
+<body>
+{% if todo_list %}
+    <ul>
+        {% for todo in todo_list %}
+            <li>{{ todo.desc }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No todos are available.</p>
+{% endif %}
+</body>
+</html>
