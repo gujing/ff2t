@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    todo list
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="/static/css/todo/todo.css">
+{% endblock %}
+{% block content %}
+    {% if todo_list %}
+        <ul>
+            {% for todo in todo_list %}
+                <li>{{ todo.desc }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No todos are available.</p>
+    {% endif %}
+{% endblock %}
