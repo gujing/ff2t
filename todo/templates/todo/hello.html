@@ -6,11 +6,14 @@
 {% block styles %}
     <link rel="stylesheet" type="text/css" href="/static/css/todo/todo.css">
 {% endblock %}
+{% block scripts %}
+    <script language="JavaScript" type="text/javascript" src="/static/js/todo/todo.js"></script>
+{% endblock %}
 {% block content %}
     {% if todo_list %}
         <ul>
             {% for todo in todo_list %}
-                <li>{{ todo.desc }}</li>
+                <li class="todo_item">{{ todo.desc }}</li>
             {% endfor %}
         </ul>
     {% else %}
